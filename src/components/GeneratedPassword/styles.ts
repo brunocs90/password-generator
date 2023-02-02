@@ -8,7 +8,7 @@ export const GeneratedPasswordContainer = styled.div`
     align-items: center;
 
     background-color: ${({ theme }) => theme.colors.darkGrey};
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 2rem;
     border: solid purple;
 
     .show {
