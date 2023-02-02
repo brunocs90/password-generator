@@ -1,7 +1,9 @@
-import { } from "./styles"
+import { PasswordGeneratorContainer } from "./styles"
 
 export function PasswordGenerator() {
     return (
-        <div>Password Generator</div>
+        <PasswordGeneratorContainer>
+            Password Generator
+        </PasswordGeneratorContainer>
     );
 }
