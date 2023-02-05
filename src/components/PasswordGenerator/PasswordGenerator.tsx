@@ -5,6 +5,7 @@ export function PasswordGenerator() {
     return (
         <PasswordGeneratorContainer>
             <SliderCharacterLength />
+            Outra coisa
         </PasswordGeneratorContainer>
     );
 }

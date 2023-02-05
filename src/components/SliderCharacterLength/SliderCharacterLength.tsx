@@ -1,16 +1,23 @@
-import { ContentContainer, SliderCharacterLengthContainer } from "./styles"
+import { ChangeEvent, useState } from "react";
+import { PasswordCharacterLengthHeader, PasswordSlider, PasswordSliderContainer, Range, SliderCharacterLengthContainer } from "./styles"
 
 export function SliderCharacterLength() {
+    const [value, setValue] = useState(1);
+
+    const handleInputValue = (event: ChangeEvent<HTMLInputElement>) => {
+        const number = Number(event.target.value)
+        setValue(number);
+    }
+
     return (
         <SliderCharacterLengthContainer>
-            <ContentContainer>
-                <span className="text">Character Length</span>
-                <span className="number">10</span>
-            </ContentContainer>
-            <ContentContainer>
-                <span className="text">Character Length</span>
-                <span className="number">10</span>
-            </ContentContainer>
+            <PasswordCharacterLengthHeader>
+                <label className="text" htmlFor="passwordLengthSlider">Character Length</label>
+                <span className="number">{value}</span>
+            </PasswordCharacterLengthHeader>
+            <PasswordSliderContainer>
+                <PasswordSlider value={value} onChange={handleInputValue} />
+            </PasswordSliderContainer>
         </SliderCharacterLengthContainer>
     );
 }
