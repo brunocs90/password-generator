@@ -41,9 +41,10 @@ export const PasswordSliderContainer = styled.div`
 `;
 
 export const PasswordSlider = styled.input.attrs({ type: 'range' })`
+	/* https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ */
 	width: 100%;
 	-webkit-appearance: none;
-	background: ${(props) => `linear-gradient(to right, #A4FFAF 0%, #A4FFAF ${props.value}%, #18171F ${props.value}%, #18171F 100% )`};
+	background: transparent;
 	margin-bottom: 1rem;
 	--range: calc(var(--max) - var(--min));
 	--ratio: calc((var(--value) - var(--min)) / var(--range));
@@ -63,6 +64,7 @@ export const PasswordSlider = styled.input.attrs({ type: 'range' })`
 
 	//Chrome
 	&::-webkit-slider-runnable-track {
+		background: ${(props) => `linear-gradient(to right, #A4FFAF 0%, #A4FFAF ${props.value}%, #18171F ${props.value}%, #18171F 100% )`};
 		-webkit-appearance: none;
 		height: 0.50rem;
 	}
@@ -78,8 +80,8 @@ export const PasswordSlider = styled.input.attrs({ type: 'range' })`
 	//Mozilla
 	&::-moz-range-track {
 		-webkit-appearance: none;
-		height: 1.5rem;
-		background: ${({ theme }) => theme.colors.darkGrey};;
+		background: ${({ theme }) => theme.colors.veryDarkGrey};
+		height: 0.5rem;
 	}
 
 	&::-moz-range-progress {
