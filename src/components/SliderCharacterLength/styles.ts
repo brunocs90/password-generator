@@ -78,7 +78,8 @@ export const PasswordSlider = styled.input.attrs({ type: 'range' })`
 	//Mozilla
 	&::-moz-range-track {
 		-webkit-appearance: none;
-		height: 0.50rem;
+		height: 1.5rem;
+		background: ${({ theme }) => theme.colors.darkGrey};;
 	}
 
 	&::-moz-range-progress {
