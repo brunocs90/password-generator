@@ -29,23 +29,4 @@ export const GeneratedPasswordContainer = styled.div`
         color: ${({ theme }) => theme.colors.almostWhite};
         font-size: ${({ theme }) => theme.Typography.Heading_L['font-size']};
     }
-
-    .copy-icon {
-		display: flex;
-		gap: 1rem;
-		align-items: center;
-
-		svg {
-			cursor: pointer;
-		}
-
-		svg:hover path {
-			fill: ${({ theme }) => theme.colors.almostWhite};
-		}
-
-		#copied-label {
-			color: ${({ theme }) => theme.colors.neonGreen};
-			font-size: ${({ theme }) => theme.Typography.Body_M['font-size']};
-		}
-	}
 `;
