@@ -1,4 +1,4 @@
-import { PageTitleContainer } from "./styles"
+import { PageTitleContainer } from "./styles";
 
 interface IPageTitle {
     title: string;
