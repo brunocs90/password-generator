@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { PasswordCharacterLengthHeader, PasswordSlider, PasswordSliderContainer, Range, SliderCharacterLengthContainer } from "./styles"
+import { PasswordCharacterLengthHeader, PasswordSlider, PasswordSliderContainer, SliderCharacterLengthContainer } from "./styles"
 
 export function SliderCharacterLength() {
     const [value, setValue] = useState(1);
