@@ -14,6 +14,7 @@ export function PasswordGenerator() {
     const [options, setOptions] = useState({ upperCase: true, lowerCase: false, numbers: false, symbols: false });
 
     const handleChange = (option: IOptionsPassword) => {
+        console.log('recebi o click');
         setOptions({ ...options, [option.type]: !options[option.type] })
     };
 
