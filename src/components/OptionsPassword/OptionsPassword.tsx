@@ -2,18 +2,21 @@ import { OptionsPasswordContainer } from "./styles"
 
 export interface IOptionsPassword {
     type: 'upperCase' | 'lowerCase' | 'numbers' | 'symbols';
-    title: string;
-};
+    label: string;
+}
 
-export function OptionsPassword({ type, title }: IOptionsPassword) {
-    const handleCheck = () => {
+interface IOptionsPasswordProps {
+    optionPassword: IOptionsPassword;
+    checked: boolean;
+    onChange: () => void;
+}
 
-    }
+export function OptionsPassword({ optionPassword, checked, onChange }: IOptionsPasswordProps) {
     return (
         <OptionsPasswordContainer>
-            <label> {title}
-                <input type="checkbox" id="includeUpperCaseLetters" checked={false} onChange={handleCheck} />
-                <span className="geekmark"></span>
+            <label className="label">
+                <input className="checkbox" type="checkbox" checked={checked} onChange={onChange} />
+                {optionPassword.label}
             </label>
         </OptionsPasswordContainer >
     );

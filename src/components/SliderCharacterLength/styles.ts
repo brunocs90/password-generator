@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const SliderCharacterLengthContainer = styled.div`
 	width: 100%;
-	height: 87px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	border: solid yellow;
+	padding-bottom: 2rem;
 
+	/* border: solid yellow; */
 `;
 
 export const PasswordCharacterLengthHeader = styled.div`
