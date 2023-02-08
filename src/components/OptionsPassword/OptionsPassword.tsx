@@ -1,5 +1,6 @@
 import { OptionsPasswordContainer } from "./styles";
 import { CheckIcon } from "./CheckIcon";
+import { useState } from "react";
 
 export interface IOptionsPassword {
     type: 'upperCase' | 'lowerCase' | 'numbers' | 'symbols';
@@ -7,20 +8,25 @@ export interface IOptionsPassword {
 }
 
 interface IOptionsPasswordProps {
-    optionPassword: IOptionsPassword;
-    checked: boolean;
-    onChange: () => void;
+    optionsPassword: IOptionsPassword[];
 }
 
-export function OptionsPassword({ optionPassword, checked, onChange }: IOptionsPasswordProps) {
+export function OptionsPassword({ optionsPassword }: IOptionsPasswordProps) {
+    const [options, setOptions] = useState({ upperCase: true, lowerCase: false, numbers: false, symbols: false });
+
+    const handleChange = (option: IOptionsPassword) => {
+        setOptions({ ...options, [option.type]: !options[option.type] })
+    };
     return (
         <OptionsPasswordContainer>
-            <label className="label">
-                {checked ? <CheckIcon /> : <></>
-                }
-                <input className="checkbox" type="checkbox" checked={checked} onChange={onChange} />
-                {optionPassword.label}
-            </label>
+            {optionsPassword.map((option, index) => (
+                <label key={index} className="container-option">
+                    {options[option.type] ? <CheckIcon /> : <></>
+                    }
+                    <input className="checkbox" type="checkbox" checked={options[option.type]} onChange={() => handleChange(option)} />
+                    {option.label}
+                </label>
+            ))}
         </OptionsPasswordContainer >
     );
 }

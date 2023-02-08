@@ -5,9 +5,9 @@ export const SliderCharacterLengthContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding-bottom: 2rem;
+	padding-bottom: 1rem;
 
-	/* border: solid yellow; */
+	border: solid yellow;
 `;
 
 export const PasswordCharacterLengthHeader = styled.div`

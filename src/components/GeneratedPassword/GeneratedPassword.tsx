@@ -9,7 +9,7 @@ export function GeneratedPassword() {
     return (
         <GeneratedPasswordContainer>
             {true ?
-                <span className='generated-password'>B94$5W0rD!</span> :
+                <span className='generated-password'>PTx1f5DaFX</span> :
                 <span className='password-placeholder'>P4$5W0rD!</span>
             }
             <IconPassword text="COPIED" onClick={copyGeneratedPassword} />

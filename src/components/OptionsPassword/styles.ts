@@ -6,15 +6,16 @@ export const OptionsPasswordContainer = styled.div`
 	font-size: ${({ theme }) => theme.Typography.Body_M['font-size']};
 	font-weight: ${({ theme }) => theme.Typography.Body_M['font-weight']};
 	line-height: ${({ theme }) => theme.Typography.Body_M['line-height']};
-	padding-bottom: 20px;
-	/* border: solid blue; */
+	border: solid blue;
+	padding-bottom: 2rem;
 
-	.label {
+	.container-option {
 		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		/* border: solid green; */
+		padding-bottom: 0.5rem;
+		border: solid green;
 	}
 
 	.checkbox{
