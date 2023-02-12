@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SliderCharacterLengthContainer = styled.div`
 	width: 100%;
-	height: 87px;
+	height: 5.438rem;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -13,7 +13,7 @@ export const SliderCharacterLengthContainer = styled.div`
 
 export const PasswordCharacterLengthHeader = styled.div`
 	width: 100%;
-	height: 43px;
+	height: 2.688rem;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -37,7 +37,7 @@ export const PasswordCharacterLengthHeader = styled.div`
 
 export const PasswordSliderContainer = styled.div`
 	width: 100%;
-	height: 44px;
+	height: 2.75rem;
 	display: flex;
 	flex-direction: column;
 	padding-top: 1rem;

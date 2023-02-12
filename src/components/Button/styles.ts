@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const ButtonContainer = styled.div`
 	width: 100%;
-	padding-top: 2rem;
 	background-color: ${({ theme }) => theme.colors.darkGrey};
+	padding-top: 2rem;
 
 	.primary-button {
 		width: 100%;
-		height: 65px;
+		height: 4.063rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;

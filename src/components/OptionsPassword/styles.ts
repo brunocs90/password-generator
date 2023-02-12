@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const OptionsPasswordContainer = styled.div`
 	width: 100%;
-	height: 216px;
+	height: 13.5rem;
 	color: ${({ theme }) => theme.colors.almostWhite};
 	font-size: ${({ theme }) => theme.Typography.Body_M['font-size']};
 	font-weight: ${({ theme }) => theme.Typography.Body_M['font-weight']};
@@ -12,7 +12,7 @@ export const OptionsPasswordContainer = styled.div`
 
 	.container-option {
 		width: 100%;
-		height: 38px;
+		height: 2.375rem;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
@@ -25,8 +25,8 @@ export const OptionsPasswordContainer = styled.div`
 
 	input {
 		all: unset;
-		width: 20px;
-		height: 20px;
+		width: 1.25rem;
+		height: 1.25rem;
 		border: 2px solid ${({ theme }) => theme.colors.almostWhite};
 		box-sizing: border-box;
 		display: inline-block;
