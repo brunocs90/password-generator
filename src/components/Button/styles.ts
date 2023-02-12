@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.button`
 	width: 100%;
 	padding-top: 2rem;
 	border: solid pink;
+	background-color: ${({ theme }) => theme.colors.darkGrey};;
 
 	.primary-button {
 		width: 100%;
@@ -23,7 +24,11 @@ export const ButtonContainer = styled.div`
 		cursor: pointer;
 		border: 2px solid ${({ theme }) => theme.colors.neonGreen};
 
-		&:hover {
+		.arrow-icon{
+			padding-left: 1.5rem;
+		}
+
+		&:hover:not([disabled]) {
 			color: ${({ theme }) => theme.colors.neonGreen};
 			background-color: ${({ theme }) => theme.colors.darkGrey};
 			fill: ${({ theme }) => theme.colors.neonGreen};
@@ -33,8 +38,10 @@ export const ButtonContainer = styled.div`
 			}
 		}
 
-		.arrow-icon{
-			padding-left: 1.5rem;
+		&:disabled{
+			background-color: ${({ theme }) => theme.colors.almostWhite};
+			border: none;
+			cursor: not-allowed;
 		}
 	}
 `;

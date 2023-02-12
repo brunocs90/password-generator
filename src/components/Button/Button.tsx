@@ -2,13 +2,14 @@ import { ArrowIcon } from "./ArrowIcon";
 import { ButtonContainer } from "./styles"
 
 interface IButtonProps {
+    disable: boolean;
     onClick: () => void;
 }
 
-export function Button({ onClick }: IButtonProps) {
+export function Button({ disable, onClick }: IButtonProps) {
     return (
         <ButtonContainer>
-            <button onClick={onClick} className="primary-button">GENERATE
+            <button disabled={disable} onClick={onClick} className="primary-button">GENERATE
                 <div className="arrow-icon">
                     <ArrowIcon />
                 </div>
