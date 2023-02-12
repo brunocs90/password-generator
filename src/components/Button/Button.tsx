@@ -1,9 +1,18 @@
+import { ArrowIcon } from "./ArrowIcon";
 import { ButtonContainer } from "./styles"
 
-export function Button() {
+interface IButtonProps {
+    onClick: () => void;
+}
+
+export function Button({ onClick }: IButtonProps) {
     return (
         <ButtonContainer>
-            <button>GENERATE</button>
+            <button onClick={onClick} className="primary-button">GENERATE
+                <div className="arrow-icon">
+                    <ArrowIcon />
+                </div>
+            </button>
         </ButtonContainer>
     );
 }

@@ -2,7 +2,39 @@ import styled from 'styled-components';
 
 export const ButtonContainer = styled.div`
 	width: 100%;
-	height: 4.06rem;
 	padding-top: 2rem;
 	border: solid pink;
+
+	.primary-button {
+		width: 100%;
+		height: 65px;
+		display: flex;
+		flex-direction: ropw;
+		justify-content: center;
+		align-items: center;
+
+		background-color: ${({ theme }) => theme.colors.neonGreen};
+		font-size: ${({ theme }) => theme.Typography.Body_M['font-size']};
+		font-weight: ${({ theme }) => theme.Typography.Body_M['font-weight']};
+		line-height: ${({ theme }) => theme.Typography.Body_M['line-height']};
+		color: ${({ theme }) => theme.colors.darkGrey};;
+		border: none;
+		text-transform: uppercase;
+		cursor: pointer;
+		border: 2px solid ${({ theme }) => theme.colors.neonGreen};
+
+		&:hover {
+			color: ${({ theme }) => theme.colors.neonGreen};
+			background-color: ${({ theme }) => theme.colors.darkGrey};
+			fill: ${({ theme }) => theme.colors.neonGreen};
+
+			& svg path {
+				fill: ${({ theme }) => theme.colors.neonGreen};
+			}
+		}
+
+		.arrow-icon{
+			padding-left: 1.5rem;
+		}
+	}
 `;

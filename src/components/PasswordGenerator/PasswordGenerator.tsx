@@ -18,12 +18,16 @@ export function PasswordGenerator() {
     const handleOnClickStrength = (strength: StrengthType) => {
         setStrength(strength);
     };
+
+    const handleClickButton = () => {
+        console.log('botão foi clicado');
+    }
     return (
         <PasswordGeneratorContainer>
             <SliderCharacterLength />
             <OptionsPassword optionsPassword={optionsText} />
             <PasswordStrength strength={strength} handleOnClickStrength={handleOnClickStrength} />
-            <Button />
+            <Button onClick={handleClickButton} />
         </PasswordGeneratorContainer>
     );
 }
