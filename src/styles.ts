@@ -14,6 +14,5 @@ export const MainContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     width: 33.75rem;
-    height: 39.5rem;
-    /* border: solid yellow; */
+    height: 43.438rem;
 `;

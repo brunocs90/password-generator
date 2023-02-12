@@ -9,8 +9,8 @@ export function App() {
 		<ThemeProvider theme={defaultTheme}>
 			<GlobalStyle />
 			<PageContainer>
-				<PageTitle title="Password Generator" />
 				<MainContainer>
+					<PageTitle title="Password Generator" />
 					<GeneratedPassword />
 					<PasswordGenerator />
 				</MainContainer>

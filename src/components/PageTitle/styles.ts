@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const PageTitleContainer = styled.div`
     width: 33.75rem;
-    padding-bottom: 1.875rem;
+    height: 3.938rem;
+    padding-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,6 +11,4 @@ export const PageTitleContainer = styled.div`
     font-weight: ${({ theme }) => theme.Typography.Heading_M['font-weight']};
     line-height: ${({ theme }) => theme.Typography.Heading_M['line-height']};
     color: ${({ theme }) => theme.colors.grey};
-
-    /* border: solid blue; */
 `;
