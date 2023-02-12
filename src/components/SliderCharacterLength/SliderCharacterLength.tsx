@@ -5,7 +5,7 @@ export function SliderCharacterLength() {
     const [value, setValue] = useState(1);
 
     const handleInputValue = (event: ChangeEvent<HTMLInputElement>) => {
-        const number = Number(event.target.value)
+        const number = Number(event.target.value);
         setValue(number);
     }
 
@@ -16,7 +16,7 @@ export function SliderCharacterLength() {
                 <span className="number">{value}</span>
             </PasswordCharacterLengthHeader>
             <PasswordSliderContainer>
-                <PasswordSlider value={value} onChange={handleInputValue} />
+                <PasswordSlider min={1} max={20} value={value} onChange={handleInputValue} />
             </PasswordSliderContainer>
         </SliderCharacterLengthContainer>
     );

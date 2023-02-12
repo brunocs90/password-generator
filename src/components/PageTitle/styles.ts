@@ -11,5 +11,5 @@ export const PageTitleContainer = styled.div`
     line-height: ${({ theme }) => theme.Typography.Heading_M['line-height']};
     color: ${({ theme }) => theme.colors.grey};
 
-    border: solid blue;
+    /* border: solid blue; */
 `;

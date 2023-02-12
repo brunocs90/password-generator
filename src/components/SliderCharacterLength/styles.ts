@@ -2,20 +2,23 @@ import styled from 'styled-components';
 
 export const SliderCharacterLengthContainer = styled.div`
 	width: 100%;
+	height: 87px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	padding-bottom: 1rem;
 
-	border: solid yellow;
+	/* border: solid red; */
 `;
 
 export const PasswordCharacterLengthHeader = styled.div`
 	width: 100%;
+	height: 43px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	/* border: solid green; */
 
 	.text {
 		color: ${({ theme }) => theme.colors.almostWhite};
@@ -34,11 +37,13 @@ export const PasswordCharacterLengthHeader = styled.div`
 
 export const PasswordSliderContainer = styled.div`
 	width: 100%;
+	height: 44px;
 	display: flex;
 	flex-direction: column;
-	padding-top: 1.5rem;
+	padding-top: 1rem;
 	justify-content: center;
 	align-items: center;
+	border: solid purple;
 `;
 
 export const PasswordSlider = styled.input.attrs({ type: 'range' })`
@@ -47,11 +52,12 @@ export const PasswordSlider = styled.input.attrs({ type: 'range' })`
 	-webkit-appearance: none;
 	background: transparent;
 	margin-bottom: 1rem;
+	--value: ${props => props.value};
 	--range: calc(var(--max) - var(--min));
 	--ratio: calc((var(--value) - var(--min)) / var(--range));
 	--sx: calc(0.5 * 2em + var(--ratio) * (100% - 2em));
-	--min: 1;
-	--max: 20;
+	--min: ${props => props.min};
+	--max: ${props => props.max};
 
 	& progress {
 		-webkit-appearance: none;
@@ -65,7 +71,7 @@ export const PasswordSlider = styled.input.attrs({ type: 'range' })`
 
 	//Chrome
 	&::-webkit-slider-runnable-track {
-		background: ${(props) => `linear-gradient(to right, #A4FFAF 0%, #A4FFAF ${props.value}%, #18171F ${props.value}%, #18171F 100% )`};
+		background: ${(props) => `linear-gradient(to right, #A4FFAF 0%, #A4FFAF ${(Number(props.value) * 5)}%, #18171F ${props.value}%, #18171F 100% )`};
 		-webkit-appearance: none;
 		height: 0.50rem;
 	}

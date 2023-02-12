@@ -3,14 +3,13 @@ import styled from 'styled-components';
 export const ButtonContainer = styled.button`
 	width: 100%;
 	padding-top: 2rem;
-	border: solid pink;
 	background-color: ${({ theme }) => theme.colors.darkGrey};;
 
 	.primary-button {
 		width: 100%;
 		height: 65px;
 		display: flex;
-		flex-direction: ropw;
+		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 
@@ -23,6 +22,7 @@ export const ButtonContainer = styled.button`
 		text-transform: uppercase;
 		cursor: pointer;
 		border: 2px solid ${({ theme }) => theme.colors.neonGreen};
+		box-sizing: border-box;
 
 		.arrow-icon{
 			padding-left: 1.5rem;

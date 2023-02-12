@@ -4,7 +4,7 @@ export const IconPasswordContainer = styled.div`
     display: flex;
     gap: 1rem;
     align-items: center;
-    border: solid pink;
+    /* border: solid pink; */
 
     svg {
         width: 21px;

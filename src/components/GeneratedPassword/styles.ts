@@ -8,8 +8,8 @@ export const GeneratedPasswordContainer = styled.div`
     align-items: center;
 
     background-color: ${({ theme }) => theme.colors.darkGrey};
-    padding: 1.25rem 2rem;
-    border: solid purple;
+    padding: 0rem 2rem;
+    /* border: solid purple; */
 
     .show {
         visibility: visible;
@@ -22,7 +22,7 @@ export const GeneratedPasswordContainer = styled.div`
     .password-placeholder {
         color: ${({ theme }) => theme.colors.grey};
         font-size: ${({ theme }) => theme.Typography.Heading_L['font-size']};
-        border: solid yellow;
+        /* border: solid yellow; */
     }
 
     .generated-password {

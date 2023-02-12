@@ -2,20 +2,21 @@ import styled from 'styled-components';
 
 export const OptionsPasswordContainer = styled.div`
 	width: 100%;
+	height: 216px;
 	color: ${({ theme }) => theme.colors.almostWhite};
 	font-size: ${({ theme }) => theme.Typography.Body_M['font-size']};
 	font-weight: ${({ theme }) => theme.Typography.Body_M['font-weight']};
 	line-height: ${({ theme }) => theme.Typography.Body_M['line-height']};
-	border: solid blue;
-	padding-bottom: 2rem;
+	/* border: solid white; */
+	padding: 2rem 0rem;
 
 	.container-option {
 		width: 100%;
+		height: 38px;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		padding-bottom: 0.5rem;
-		border: solid green;
+		/* border: solid green; */
 	}
 
 	.checkbox{

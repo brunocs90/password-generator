@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const PasswordGeneratorContainer = styled.div`
 	width: 100%;
-	height: 100%;
+	height: 33rem;
 	margin-top: 1.5rem;
 	padding: 1.5rem 2rem;
 
@@ -10,5 +10,5 @@ export const PasswordGeneratorContainer = styled.div`
 	flex-direction: column;
 	background-color: ${({ theme }) => theme.colors.darkGrey};
 
-	border: solid pink;
+	/* border: solid blue; */
 `;
