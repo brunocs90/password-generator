@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "../Button/Button";
 import { IOptionsPassword, OptionsPassword } from "../OptionsPassword/OptionsPassword";
 import { PasswordStrength, StrengthType } from "../PasswordStrength/PasswordStrength";
 
@@ -22,6 +23,7 @@ export function PasswordGenerator() {
             <SliderCharacterLength />
             <OptionsPassword optionsPassword={optionsText} />
             <PasswordStrength strength={strength} handleOnClickStrength={handleOnClickStrength} />
+            <Button />
         </PasswordGeneratorContainer>
     );
 }

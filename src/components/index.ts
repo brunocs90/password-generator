@@ -5,3 +5,4 @@ export { SliderCharacterLength } from './SliderCharacterLength/SliderCharacterLe
 export { PageTitle } from './PageTitle/PageTitle'
 export { OptionsPassword } from './OptionsPassword/OptionsPassword'
 export { PasswordStrength } from './PasswordStrength/PasswordStrength'
+export { Button } from './Button/Button'
