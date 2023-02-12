@@ -27,7 +27,7 @@ export function PasswordGenerator() {
             <SliderCharacterLength />
             <OptionsPassword optionsPassword={optionsText} />
             <PasswordStrength strength={strength} handleOnClickStrength={handleOnClickStrength} />
-            {/* <Button disable={false} onClick={handleClickButton} /> */}
+            <Button disable={false} onClick={handleClickButton} />
         </PasswordGeneratorContainer>
     );
 }

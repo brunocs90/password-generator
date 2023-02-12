@@ -43,7 +43,7 @@ export const PasswordSliderContainer = styled.div`
 	padding-top: 1rem;
 	justify-content: center;
 	align-items: center;
-	border: solid purple;
+	/* border: solid purple; */
 `;
 
 export const PasswordSlider = styled.input.attrs({ type: 'range' })`

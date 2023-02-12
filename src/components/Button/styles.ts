@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-export const ButtonContainer = styled.button`
+export const ButtonContainer = styled.div`
 	width: 100%;
 	padding-top: 2rem;
-	background-color: ${({ theme }) => theme.colors.darkGrey};;
+	background-color: ${({ theme }) => theme.colors.darkGrey};
 
 	.primary-button {
 		width: 100%;
