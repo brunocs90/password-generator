@@ -25,7 +25,6 @@ export const PasswordStrengthContainer = styled.div`
 		flex-direction: row;
 		justify-items: center;
 		align-items: center;
-		/* border: solid red; */
 	}
 
 	.gauge-text{
@@ -67,10 +66,9 @@ export const PasswordStrengthContainer = styled.div`
     }
 
 	button{
+		all: unset;
 		width: 0.64rem;
 		height: 1.74rem;
 		margin-right: 0.4rem;
-		background-color: transparent;
-		background-image: none;
 	}
 `;

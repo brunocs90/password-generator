@@ -45,13 +45,12 @@ export function PasswordStrength({ strength, handleOnClickStrength }: StrengthPr
                 {availableStrengths.map((level) => {
                     if (level > 0)
                         return (
-                            <Gauge key={level} currentLevel={tempStrength} availableLevel={level} />
-                            // <button key={level}
-                            //     onClick={() => handleOnClickStrength(level)}
-                            //     onMouseEnter={() => setTempStrength(level)}
-                            //     onMouseLeave={() => setTempStrength(strength)}>
-                            //     <Gauge key={level} currentLevel={tempStrength} availableLevel={level} />
-                            // </button>
+                            <button key={level}
+                                onClick={() => handleOnClickStrength(level)}
+                                onMouseEnter={() => setTempStrength(level)}
+                                onMouseLeave={() => setTempStrength(strength)}>
+                                <Gauge key={level} currentLevel={tempStrength} availableLevel={level} />
+                            </button>
                         );
                 })}
             </div>
