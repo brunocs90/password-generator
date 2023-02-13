@@ -15,4 +15,12 @@ export const MainContainer = styled.div`
     align-items: flex-start;
     width: 33.75rem;
     height: 43.438rem;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 21.438rem;
+        height: 33.75rem;
+    }
 `;

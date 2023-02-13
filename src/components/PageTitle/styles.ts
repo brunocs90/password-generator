@@ -11,4 +11,10 @@ export const PageTitleContainer = styled.div`
     font-weight: ${({ theme }) => theme.Typography.Heading_M['font-weight']};
     line-height: ${({ theme }) => theme.Typography.Heading_M['line-height']};
     color: ${({ theme }) => theme.colors.grey};
+
+    @media (max-width: 768px) {
+        width: 21.438rem;
+        height: 2.313rem;
+        font-size: 16px;
+    }
 `;
