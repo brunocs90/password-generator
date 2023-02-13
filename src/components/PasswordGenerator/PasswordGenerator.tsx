@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { Button } from "../Button/Button";
-import { IOptionsPassword, OptionsPassword } from "../OptionsPassword/OptionsPassword";
-import { PasswordStrength, StrengthType } from "../PasswordStrength/PasswordStrength";
+import { useState } from 'react';
+import { Button } from '../Button/Button';
+import { IOptionsPassword, OptionsPassword } from '../OptionsPassword/OptionsPassword';
+import { PasswordStrength, StrengthType } from '../PasswordStrength/PasswordStrength';
 
-import { SliderCharacterLength } from "../SliderCharacterLength/SliderCharacterLength";
-import { PasswordGeneratorContainer } from "./styles"
+import { SliderCharacterLength } from '../SliderCharacterLength/SliderCharacterLength';
+import { PasswordGeneratorContainer } from './styles';
 
 const optionsText: IOptionsPassword[] = [
     { type: 'upperCase', label: 'Include Uppercase Letters' },
@@ -21,7 +21,7 @@ export function PasswordGenerator() {
 
     const handleClickButton = () => {
         console.log('botão foi clicado');
-    }
+    };
     return (
         <PasswordGeneratorContainer>
             <SliderCharacterLength />

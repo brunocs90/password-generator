@@ -1,14 +1,14 @@
-import { useState } from "react";
-import { PasswordStrengthContainer } from "./styles"
+import { useState } from 'react';
+import { PasswordStrengthContainer } from './styles';
 
 export type StrengthType = 0 | 1 | 2 | 3 | 4;
 type StrengthProps = {
-    strength: StrengthType,
-    handleOnClickStrength: (level: StrengthType) => void
+    strength: StrengthType;
+    handleOnClickStrength: (level: StrengthType) => void;
 };
 type GaugeProps = {
     currentLevel: StrengthType;
-    availableLevel: StrengthType
+    availableLevel: StrengthType;
 };
 
 function strengthCharacteristics(strength: StrengthType) {
@@ -26,9 +26,7 @@ function strengthCharacteristics(strength: StrengthType) {
 
 function Gauge({ currentLevel, availableLevel }: GaugeProps) {
     const classCss = currentLevel >= availableLevel ? strengthCharacteristics(currentLevel)?.class : undefined;
-    return (
-        <div className={`strength-gauge ${classCss}`}></div>
-    );
+    return <div className={`strength-gauge ${classCss}`}></div>;
 }
 
 const availableStrengths: StrengthType[] = [0, 1, 2, 3, 4];
@@ -39,16 +37,16 @@ export function PasswordStrength({ strength, handleOnClickStrength }: StrengthPr
         <PasswordStrengthContainer>
             <span className="strength-text">STRENGTH</span>
             <div className="gauge-container">
-                <div className="gauge-text">
-                    {strengthCharacteristics(tempStrength)?.title}
-                </div>
-                {availableStrengths.map((level) => {
+                <div className="gauge-text">{strengthCharacteristics(tempStrength)?.title}</div>
+                {availableStrengths.map(level => {
                     if (level > 0)
                         return (
-                            <button key={level}
+                            <button
+                                key={level}
                                 onClick={() => handleOnClickStrength(level)}
                                 onMouseEnter={() => setTempStrength(level)}
-                                onMouseLeave={() => setTempStrength(strength)}>
+                                onMouseLeave={() => setTempStrength(strength)}
+                            >
                                 <Gauge key={level} currentLevel={tempStrength} availableLevel={level} />
                             </button>
                         );

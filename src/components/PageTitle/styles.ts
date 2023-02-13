@@ -12,9 +12,12 @@ export const PageTitleContainer = styled.div`
     line-height: ${({ theme }) => theme.Typography.Heading_M['line-height']};
     color: ${({ theme }) => theme.colors.grey};
 
+    //mobile
     @media (max-width: 768px) {
         width: 21.438rem;
         height: 2.313rem;
+        padding-bottom: 0;
         font-size: 16px;
+        border: solid yellow;
     }
 `;
