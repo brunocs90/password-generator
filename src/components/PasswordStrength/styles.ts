@@ -77,7 +77,7 @@ export const PasswordStrengthContainer = styled.div`
         padding: 0rem 0.813rem;
 
         .strength-text {
-            font-size: 16px;
+            font-size: 1rem;
         }
 
         .gauge-text {

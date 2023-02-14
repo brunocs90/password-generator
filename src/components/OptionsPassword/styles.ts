@@ -50,7 +50,7 @@ export const OptionsPasswordContainer = styled.div`
 
     @media (max-width: 768px) {
         height: 12.25rem; //196px
-        font-size: 16px;
+        font-size: 1rem;
 
         .container-option {
             height: 2.063rem; //33px

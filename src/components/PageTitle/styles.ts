@@ -17,7 +17,7 @@ export const PageTitleContainer = styled.div`
         width: 21.438rem;
         height: 2.313rem;
         padding-bottom: 1rem;
-        font-size: 16px;
+        font-size: 1rem;
         /* border: solid yellow; */
     }
 `;

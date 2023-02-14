@@ -43,7 +43,7 @@ export const PasswordCharacterLengthHeader = styled.div`
         height: 1.938rem; //31px
 
         .text {
-            font-size: 16px;
+            font-size: 1rem;
         }
 
         .number {
