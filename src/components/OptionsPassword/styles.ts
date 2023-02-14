@@ -47,4 +47,17 @@ export const OptionsPasswordContainer = styled.div`
         cursor: pointer;
         fill: ${({ theme }) => theme.colors.veryDarkGrey};
     }
+
+    @media (max-width: 768px) {
+        height: 12.25rem; //196px
+        font-size: 16px;
+
+        .container-option {
+            height: 2.063rem; //33px
+        }
+
+        .checkbox {
+            margin-right: 1.25rem;
+        }
+    }
 `;

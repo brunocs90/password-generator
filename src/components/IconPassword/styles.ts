@@ -20,4 +20,11 @@ export const IconPasswordContainer = styled.div`
         color: ${({ theme }) => theme.colors.neonGreen};
         font-size: ${({ theme }) => theme.Typography.Body_M['font-size']};
     }
+
+    @media (max-width: 768px) {
+        svg {
+            width: 1.063rem;
+            height: 1.25rem;
+        }
+    }
 `;

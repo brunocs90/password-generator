@@ -16,8 +16,8 @@ export const PageTitleContainer = styled.div`
     @media (max-width: 768px) {
         width: 21.438rem;
         height: 2.313rem;
-        padding-bottom: 0;
+        padding-bottom: 1rem;
         font-size: 16px;
-        border: solid yellow;
+        /* border: solid yellow; */
     }
 `;

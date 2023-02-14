@@ -44,4 +44,17 @@ export const ButtonContainer = styled.div`
             cursor: not-allowed;
         }
     }
+
+    @media (max-width: 768px) {
+        padding-top: 1rem;
+
+        .primary-button {
+            height: 3.5rem;
+            font-size: 1rem;
+
+            .arrow-icon {
+                padding-left: 1rem;
+            }
+        }
+    }
 `;

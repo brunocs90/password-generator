@@ -10,5 +10,10 @@ export const PasswordGeneratorContainer = styled.div`
     flex-direction: column;
     background-color: ${({ theme }) => theme.colors.darkGrey};
 
-    /* border: solid blue; */
+    @media (max-width: 768px) {
+        /* border: solid yellow; */
+        height: 26.438rem;
+        margin-top: 1rem;
+        padding: 1rem 1rem;
+    }
 `;

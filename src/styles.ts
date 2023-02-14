@@ -19,6 +19,6 @@ export const MainContainer = styled.div`
     @media (max-width: 768px) {
         width: 21.438rem;
         height: 33.75rem;
-        border: solid white;
+        /* border: solid white; */
     }
 `;

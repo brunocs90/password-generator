@@ -9,6 +9,11 @@ export const SliderCharacterLengthContainer = styled.div`
     padding-bottom: 1rem;
 
     /* border: solid red; */
+
+    @media (max-width: 768px) {
+        height: 4.188rem; //67px
+        padding-bottom: 0rem;
+    }
 `;
 
 export const PasswordCharacterLengthHeader = styled.div`
@@ -33,6 +38,18 @@ export const PasswordCharacterLengthHeader = styled.div`
         font-weight: ${({ theme }) => theme.Typography.Heading_L['font-weight']};
         line-height: ${({ theme }) => theme.Typography.Heading_L['line-height']};
     }
+
+    @media (max-width: 768px) {
+        height: 1.938rem; //31px
+
+        .text {
+            font-size: 16px;
+        }
+
+        .number {
+            font-size: ${({ theme }) => theme.Typography.Heading_M['font-size']};
+        }
+    }
 `;
 
 export const PasswordSliderContainer = styled.div`
@@ -44,6 +61,10 @@ export const PasswordSliderContainer = styled.div`
     justify-content: center;
     align-items: center;
     /* border: solid purple; */
+
+    @media (max-width: 768px) {
+        height: 2.25rem; //36px
+    }
 `;
 
 export const PasswordSlider = styled.input.attrs({ type: 'range' })`

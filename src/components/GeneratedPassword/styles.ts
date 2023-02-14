@@ -37,7 +37,7 @@ export const GeneratedPasswordContainer = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: solid red;
+        /* border: solid red; */
         padding: 1rem 1rem;
 
         .password-placeholder {

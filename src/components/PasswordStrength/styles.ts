@@ -71,4 +71,18 @@ export const PasswordStrengthContainer = styled.div`
         height: 1.74rem;
         margin-right: 0.4rem;
     }
+
+    @media (max-width: 768px) {
+        height: 3.5rem;
+        padding: 0rem 0.813rem;
+
+        .strength-text {
+            font-size: 16px;
+        }
+
+        .gauge-text {
+            font-size: ${({ theme }) => theme.Typography.Body_M['font-size']};
+            padding-right: 0.75rem;
+        }
+    }
 `;
