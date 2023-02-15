@@ -15,6 +15,7 @@ const optionsText: IOptionsPassword[] = [
 
 export function PasswordGenerator() {
     const [strength, setStrength] = useState<StrengthType>(3);
+
     const handleOnClickStrength = (strength: StrengthType) => {
         setStrength(strength);
     };
