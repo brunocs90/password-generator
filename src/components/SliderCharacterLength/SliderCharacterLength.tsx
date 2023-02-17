@@ -1,4 +1,5 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent } from 'react';
+import { useData } from '../../hooks/useData';
 import {
     PasswordCharacterLengthHeader,
     PasswordSlider,
@@ -7,11 +8,11 @@ import {
 } from './styles';
 
 export function SliderCharacterLength() {
-    const [value, setValue] = useState(1);
+    const { characterLength, setCharacterLength } = useData();
 
     const handleInputValue = (event: ChangeEvent<HTMLInputElement>) => {
         const number = Number(event.target.value);
-        setValue(number);
+        setCharacterLength(number);
     };
 
     return (
@@ -20,10 +21,10 @@ export function SliderCharacterLength() {
                 <label className="text" htmlFor="passwordLengthSlider">
                     Character Length
                 </label>
-                <span className="number">{value}</span>
+                <span className="number">{characterLength}</span>
             </PasswordCharacterLengthHeader>
             <PasswordSliderContainer>
-                <PasswordSlider min={1} max={20} value={value} onChange={handleInputValue} />
+                <PasswordSlider min={1} max={20} value={characterLength} onChange={handleInputValue} />
             </PasswordSliderContainer>
         </SliderCharacterLengthContainer>
     );

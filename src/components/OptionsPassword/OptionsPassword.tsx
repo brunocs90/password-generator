@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useData } from '../../hooks/useData';
 import { CheckIcon } from './CheckIcon';
 import { OptionsPasswordContainer } from './styles';
 
@@ -12,7 +12,7 @@ interface IOptionsPasswordProps {
 }
 
 export function OptionsPassword({ optionsPassword }: IOptionsPasswordProps) {
-    const [options, setOptions] = useState({ upperCase: true, lowerCase: false, numbers: false, symbols: false });
+    const { options, setOptions } = useData();
 
     const handleChange = (option: IOptionsPassword) => {
         setOptions({ ...options, [option.type]: !options[option.type] });

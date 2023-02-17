@@ -1,10 +1,10 @@
 import { createContext, ReactNode, useState } from 'react';
 
 type IOptions = {
-    includeUppercase: boolean;
-    includeLowerCase: boolean;
-    includeNumbers: boolean;
-    includeSymbols: boolean;
+    upperCase: boolean;
+    lowerCase: boolean;
+    numbers: boolean;
+    symbols: boolean;
 };
 
 interface IDataContext {
@@ -30,10 +30,10 @@ export const DataContext = createContext<IDataContext>({
     gaugeValue: 0,
     setGaugeValue: () => {},
     options: {
-        includeUppercase: false,
-        includeLowerCase: false,
-        includeNumbers: false,
-        includeSymbols: false,
+        upperCase: false,
+        lowerCase: false,
+        numbers: false,
+        symbols: false,
     },
     setOptions: () => {},
 });
@@ -48,10 +48,10 @@ export function DataContextProvider({ children }: DataProviderProps) {
     const [passwordStrength, setPasswordStrength] = useState(0);
     const [gaugeValue, setGaugeValue] = useState(0);
     const [options, setOptions] = useState({
-        includeUppercase: false,
-        includeLowerCase: false,
-        includeNumbers: false,
-        includeSymbols: false,
+        upperCase: false,
+        lowerCase: false,
+        numbers: false,
+        symbols: false,
     });
 
     return (
