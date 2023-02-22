@@ -4,6 +4,7 @@ export const IconPasswordContainer = styled.div`
     display: flex;
     gap: 1rem;
     align-items: center;
+    /* border: solid blue; */
 
     svg {
         width: 1.313rem;
@@ -16,6 +17,14 @@ export const IconPasswordContainer = styled.div`
         fill: ${({ theme }) => theme.colors.almostWhite};
     }
 
+    .show {
+        visibility: visible;
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
     #copied-label {
         color: ${({ theme }) => theme.colors.neonGreen};
         font-size: ${({ theme }) => theme.Typography.Body_M['font-size']};
@@ -25,6 +34,14 @@ export const IconPasswordContainer = styled.div`
         svg {
             width: 1.063rem;
             height: 1.25rem;
+        }
+
+        span {
+            display: none;
+        }
+
+        #copied-label {
+            display: none;
         }
     }
 `;
