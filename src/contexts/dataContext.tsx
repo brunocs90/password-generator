@@ -42,7 +42,7 @@ type DataProviderProps = {
 
 export function DataContextProvider({ children }: DataProviderProps) {
     const [characterLength, setCharacterLength] = useState(5);
-    const [generatedPassword, setGeneratedPassword] = useState('testeBruno1');
+    const [generatedPassword, setGeneratedPassword] = useState('');
     const [passwordStrength, setPasswordStrength] = useState<StrengthType>(1);
     const [options, setOptions] = useState({
         upperCase: true,

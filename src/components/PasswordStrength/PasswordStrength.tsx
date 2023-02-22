@@ -38,7 +38,7 @@ export function PasswordStrength({ strength, handleOnClickStrength }: StrengthPr
         <PasswordStrengthContainer>
             <span className="strength-text">STRENGTH</span>
             <div className="gauge-container">
-                <div className="gauge-text">{strengthCharacteristics(tempStrength)?.title}</div>
+                <div className="gauge-text">{strengthCharacteristics(strength)?.title}</div>
                 {availableStrengths.map(level => {
                     if (level > 0)
                         return (

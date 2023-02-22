@@ -1,3 +1,4 @@
+import { generate } from 'generate-password-browser';
 import { StrengthType } from '../../contexts/dataContext';
 import { useData } from '../../hooks/useData';
 import { Button } from '../Button/Button';
@@ -15,11 +16,44 @@ const optionsText: IOptionsPassword[] = [
 ];
 
 export function PasswordGenerator() {
-    const { passwordStrength, setPasswordStrength, setCharacterLength, setOptions } = useData();
+    const {
+        setGeneratedPassword,
+        passwordStrength,
+        setPasswordStrength,
+        characterLength,
+        setCharacterLength,
+        options,
+        setOptions,
+    } = useData();
 
     const handleOnClickStrength = (strength: StrengthType) => {
         setPasswordStrength(strength);
         settingsPasswordStrength(strength);
+    };
+
+    const getNumbersChecks = (): number => {
+        let numbersChecks = 0;
+        for (const option of Object.values(options)) {
+            if (option) {
+                numbersChecks++;
+            }
+        }
+        return numbersChecks;
+    };
+
+    const avaliablePasswordStrength = () => {
+        const numbersChecks = getNumbersChecks();
+        if (characterLength >= 15 && numbersChecks >= 4) {
+            setPasswordStrength(4);
+        } else if (characterLength >= 10 && numbersChecks >= 3) {
+            setPasswordStrength(3);
+        } else if (characterLength >= 5 && numbersChecks >= 2) {
+            setPasswordStrength(2);
+        } else if (characterLength < 5 || numbersChecks == 1) {
+            setPasswordStrength(1);
+        } else {
+            setPasswordStrength(0);
+        }
     };
 
     const settingsPasswordStrength = (strength: StrengthType) => {
@@ -42,7 +76,20 @@ export function PasswordGenerator() {
     };
 
     const handleClickButton = () => {
-        console.log('Agora irei validar qual é a força da senha');
+        avaliablePasswordStrength();
+
+        if (getNumbersChecks() == 0) {
+            setGeneratedPassword('');
+            return;
+        }
+        const passwordGenerated = generate({
+            length: characterLength,
+            uppercase: options.upperCase,
+            lowercase: options.lowerCase,
+            numbers: options.numbers,
+            symbols: options.symbols,
+        });
+        setGeneratedPassword(passwordGenerated);
     };
     return (
         <PasswordGeneratorContainer>
