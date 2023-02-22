@@ -1,7 +1,7 @@
 import { useState } from 'react';
+import { StrengthType } from '../../contexts/dataContext';
 import { PasswordStrengthContainer } from './styles';
 
-export type StrengthType = 0 | 1 | 2 | 3 | 4;
 type StrengthProps = {
     strength: StrengthType;
     handleOnClickStrength: (level: StrengthType) => void;
@@ -33,6 +33,7 @@ const availableStrengths: StrengthType[] = [0, 1, 2, 3, 4];
 
 export function PasswordStrength({ strength, handleOnClickStrength }: StrengthProps) {
     const [tempStrength, setTempStrength] = useState<StrengthType>(strength);
+
     return (
         <PasswordStrengthContainer>
             <span className="strength-text">STRENGTH</span>

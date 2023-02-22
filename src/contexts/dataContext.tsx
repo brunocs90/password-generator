@@ -1,5 +1,7 @@
 import { createContext, ReactNode, useState } from 'react';
 
+export type StrengthType = 0 | 1 | 2 | 3 | 4;
+
 type IOptions = {
     upperCase: boolean;
     lowerCase: boolean;
@@ -12,10 +14,8 @@ interface IDataContext {
     setCharacterLength: React.Dispatch<React.SetStateAction<number>>;
     generatedPassword: string;
     setGeneratedPassword: React.Dispatch<React.SetStateAction<string>>;
-    passwordStrength: number;
-    setPasswordStrength: React.Dispatch<React.SetStateAction<number>>;
-    gaugeValue: number;
-    setGaugeValue: React.Dispatch<React.SetStateAction<number>>;
+    passwordStrength: StrengthType;
+    setPasswordStrength: React.Dispatch<React.SetStateAction<StrengthType>>;
     options: IOptions;
     setOptions: React.Dispatch<React.SetStateAction<IOptions>>;
 }
@@ -27,8 +27,6 @@ export const DataContext = createContext<IDataContext>({
     setGeneratedPassword: () => {},
     passwordStrength: 0,
     setPasswordStrength: () => {},
-    gaugeValue: 0,
-    setGaugeValue: () => {},
     options: {
         upperCase: false,
         lowerCase: false,
@@ -43,12 +41,11 @@ type DataProviderProps = {
 };
 
 export function DataContextProvider({ children }: DataProviderProps) {
-    const [characterLength, setCharacterLength] = useState(10);
+    const [characterLength, setCharacterLength] = useState(5);
     const [generatedPassword, setGeneratedPassword] = useState('testeBruno1');
-    const [passwordStrength, setPasswordStrength] = useState(0);
-    const [gaugeValue, setGaugeValue] = useState(0);
+    const [passwordStrength, setPasswordStrength] = useState<StrengthType>(1);
     const [options, setOptions] = useState({
-        upperCase: false,
+        upperCase: true,
         lowerCase: false,
         numbers: false,
         symbols: false,
@@ -63,8 +60,6 @@ export function DataContextProvider({ children }: DataProviderProps) {
                 setGeneratedPassword,
                 passwordStrength,
                 setPasswordStrength,
-                gaugeValue,
-                setGaugeValue,
                 options,
                 setOptions,
             }}
