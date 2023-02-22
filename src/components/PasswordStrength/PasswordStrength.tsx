@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StrengthType } from '../../contexts/dataContext';
+import { useData } from '../../hooks/useData';
 import { PasswordStrengthContainer } from './styles';
 
 type StrengthProps = {
@@ -33,6 +34,11 @@ const availableStrengths: StrengthType[] = [0, 1, 2, 3, 4];
 
 export function PasswordStrength({ strength, handleOnClickStrength }: StrengthProps) {
     const [tempStrength, setTempStrength] = useState<StrengthType>(strength);
+    const { passwordStrength } = useData();
+
+    useEffect(() => {
+        setTempStrength(strength);
+    }, [passwordStrength]);
 
     return (
         <PasswordStrengthContainer>
