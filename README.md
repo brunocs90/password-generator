@@ -3,12 +3,11 @@
 </h1>
 
 <p align="center">
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-instalação">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-setup">Setup</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
 </p>
-
 <br>
 
 <p align="center">
@@ -17,19 +16,23 @@
 
 <br>
 
-## 💻 Projeto
+## 🚀 Project
 
-Este projeto foi proposto para praticar conceitos do React através do site [Frontend Mentor](https://www.frontendmentor.io/challenges/password-generator-app-Mr8CLycqjh). Neste projeto temos as seguintes funcionalidades:
+Your challenge is to build out this password generator app and get it looking as close to the design as possible.
 
--   Gere uma senha com base nas opções de inclusão selecionadas
--   Copie a senha gerada para a área de transferência do computador
--   Veja uma classificação de força para a senha gerada
--   Veja o layout ideal para a interface, dependendo do tamanho da tela do dispositivo
--   Veja os estados de foco para todos os elementos interativos na página
+You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-## 🚀 Tecnologias
+Your users should be able to:
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+- Generate a password based on the selected inclusion options
+- Copy the generated password to the computer's clipboard
+- See a strength rating for their generated password
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+
+## 💻 Technologies
+
+This project was developed using the following technologies:
 
 -   [TypeScript](https://www.typescriptlang.org/)
 -   [React](https://pt-br.reactjs.org/)
@@ -37,24 +40,24 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 -   [Vite](https://vitejs.dev/)
 -   [Vercel](https://vercel.com/)
 
-## 📥 Instalação
+## 📥 Setup
 
-Faça um clone desse repositório e acesse o diretório. Em instale todas as dependências com o seguinte comando:
+Clone this repository and navigate to the directory. Then, install all dependencies with the following command:
 
 ```bash
 npm i
 ```
-
-Em seguida execute o comando
+Next, run the command:
 
 ```bash
 npm run dev
 ```
 
-## :memo: Licença
+## 📝 License
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+This project is licensed under the MIT license. See the [LICENSE](LICENSE.md) file for more details.
 
 ---
 
-**Desenvolvido por [Bruno César](https://github.com/brunocs90).**
+**Developed by [Bruno César](https://github.com/brunocs90).**
+
